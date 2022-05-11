@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyNotes.Views.NotesPage"
+             Title="Notes"
+             Padding="15">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolbarAdd" Text="Add" />
+    </ContentPage.ToolbarItems>
+
+    <CollectionView x:Name="noteCollectionView"
+                    Margin="20"
+                    SelectionMode="Single">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout Orientation="Horizontal"  >
+                    <StackLayout Orientation="Vertical" >
+                        <Label Text="{Binding Subject}" FontSize="15" FontAttributes="Bold,Italic"/>
+                        <Label Text="{Binding NoteText}" MaxLines="3" LineBreakMode="TailTruncation"/>
+                    </StackLayout>
+                    <Label Text="{Binding LastUpdate, StringFormat='{0:yyyy/MM/dd hh:mm:ss}'}" 
+                           HorizontalOptions="EndAndExpand"
+                           TextColor="Silver" 
+                           FontSize="Small"/>
+                
+                </StackLayout>
+             
+                   
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
