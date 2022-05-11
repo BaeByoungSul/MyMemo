@@ -30,8 +30,7 @@ namespace MyNotes.Views
             InitializeComponent();
             BindingContext = new MyNote();
 
-            NavigationPage.SetHasBackButton(this, false);
-
+         
             btnSave.Clicked += BtnSave_Clicked;
             btnDelete.Clicked += BtnDelete_Clicked;
         }
