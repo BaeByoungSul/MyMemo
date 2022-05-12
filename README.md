@@ -15,5 +15,5 @@
   - SQLite: sqlite-net-pcl
 
 ## 참조 Url
-  - https://docs.microsoft.com/ko-kr/xamarin/get-started/quickstarts/database?pivots=windows
+  - SQLite: https://docs.microsoft.com/ko-kr/xamarin/get-started/quickstarts/database?pivots=windows
   - app icon 변경: https://www.youtube.com/watch?v=tbKrbv9h_ZE
