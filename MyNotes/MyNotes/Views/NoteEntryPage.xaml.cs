@@ -59,6 +59,8 @@ namespace MyNotes.Views
                     if (action)
                     {
                         var note = (MyNote)BindingContext;
+                        note.LastUpdate = DateTime.Now;
+
                         MessagingCenter.Send<MyNote>(note, "SaveChanges");
                     }
                 }

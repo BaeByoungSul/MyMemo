@@ -18,7 +18,7 @@ namespace MyNotes.Data
         
         public Task<List<MyNote>> GetMyNotesAsync()
         {
-            return _connection.Table<MyNote>().ToListAsync();
+            return _connection.Table<MyNote>().OrderByDescending(x=>x.LastUpdate).ToListAsync();
             
         }
     
